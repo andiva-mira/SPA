@@ -1363,6 +1363,11 @@ Instead edit gulp/templates/sprite */
 .primary-nav a {
        padding: 12px 0
   }
+
+
+       .primary-nav a.is-current-link {
+        color: #e8762d;
+       }
   }
 
 .reveal-item {
