@@ -584,6 +584,10 @@ a {
     max-width: 976px;
   }
 
+.wrapper--narrow {
+    max-width: 470px;
+  }
+
 .wrapper--no-padding-until-medium {
     padding-left: 0;
     padding-right: 0;
@@ -908,6 +912,11 @@ a {
 
 .section-title--blue {
     color: #78706e;
+  }
+
+.section-title--less-margin {
+    margin-bottom: 1.3rem;
+    margin-top: 0;
   }
 
 .section-title__icon {
@@ -1383,3 +1392,112 @@ Instead edit gulp/templates/sprite */
 		-webkit-transform: scale(1);
 		        transform: scale(1);
 	}
+
+.modal {
+	position: fixed;
+	background-color: rgba(255,255,255, .8);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column nowrap;
+	        flex-flow: column nowrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	top:0;
+	bottom: 0;
+	left:0;
+	right: 0;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transform: scale(1.25);
+	        transform: scale(1.25);
+	-webkit-transition: all .5s ease-out;
+	transition: all .5s ease-out;
+	z-index: 99;
+}
+
+.modal--is-visible {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+
+.modal--is-visible .modal-inner {
+			-webkit-transform: translate3d(0, 0, 0);
+			        transform: translate3d(0, 0, 0);
+		}
+
+.modal__description {
+		text-align: center;
+		font-size: 1.3rem;
+		font-weight: 300;
+		line-height: 1.65;
+	}
+
+.modal__close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		font-size:2rem;
+		color: #78706e;
+		-webkit-transform: scaleX(1.35);
+		        transform: scaleX(1.35);
+		-webkit-transform-origin: 100% 0;
+		        transform-origin: 100% 0;
+		-webkit-transition: color .4s ease-out;
+		transition: color .4s ease-out;
+		cursor:pointer;
+	}
+
+.modal__close:hover {
+			color: #e8762d;
+		}
+
+.social-icons {
+	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row wrap;
+	        flex-flow: row wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+
+}
+
+.social-icons__icon {
+		background-color: #e8762d;	
+		margin: 5px;
+		width: 33%;
+		height: 72px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+
+@media (min-width: 530px) {
+
+.social-icons__icon {
+			margin: 0 5px;
+			width: 72px;
+			border-radius: 50%
+	}
+  }
+
+.social-icons__icon .icon {
+			display: block;
+
+		}

@@ -1,0 +1,29 @@
+.social-icons {
+	text-align: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	&__icon {
+		background-color: $mainOrange;	
+		margin: 5px;
+		width: 33%;
+		height: 72px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+
+		@mixin atSmall {
+			margin: 0 5px;
+			width: 72px;
+			border-radius: 50%;
+		}
+
+		.icon {
+			display: block;
+
+		}
+	}
+
+}
